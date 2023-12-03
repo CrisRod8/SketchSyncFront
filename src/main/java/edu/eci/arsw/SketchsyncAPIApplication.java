@@ -10,9 +10,6 @@ import java.util.Collections;
 @ComponentScan(basePackages = {"edu.eci.arsw"})
 public class SketchsyncAPIApplication {
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(SketchsyncAPIApplication.class);
-        app.setDefaultProperties(Collections
-                .singletonMap("server.port", "8080"));
-        app.run(args);
+        SpringApplication.run(SketchsyncAPIApplication.class, args);
     }
 }
