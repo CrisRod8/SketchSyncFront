@@ -6,6 +6,8 @@ var app = (function (){
     var initialX,
         initialY;
 
+    var backendUrl = "https://sketchsyncback.azurewebsites.net";
+
     function defcolor(){
         let input= document.getElementById('color');
         color = input.value;
@@ -122,7 +124,7 @@ var app = (function (){
 
 
     var connectAndSubscribe = function (name) {
-        var socket = new SockJS('sketchsyncback.azurewebsites.net/stompendpoint');
+        var socket = new SockJS(backendUrl + '/stompendpoint');
         stompClient = Stomp.over(socket);
 
         //subscribe to /topic/TOPICXX when connections succeed
@@ -294,6 +296,3 @@ var app = (function (){
     }
 })();
 console.log(app);
-
-
-
