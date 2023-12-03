@@ -122,7 +122,7 @@ var app = (function (){
 
 
     var connectAndSubscribe = function (name) {
-        var socket = new SockJS('/stompendpoint');
+        var socket = new SockJS('sketchsyncback.azurewebsites.net/stompendpoint');
         stompClient = Stomp.over(socket);
 
         //subscribe to /topic/TOPICXX when connections succeed
