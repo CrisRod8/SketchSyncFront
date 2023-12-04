@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'sketchsync'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA97F551A6514028AB9B061996F7B30D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8E66278F15C84E039F2336C35CD05840 }}
           package: '*.jar'
